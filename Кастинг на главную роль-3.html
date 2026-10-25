@@ -1,0 +1,190 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Кастинг на главную роль</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column like a casting slate — header slate, then one "take" (question) at a time, then the result card */
+:root{
+  --bg:#F2ECF0; --surface:#FFFFFF; --ink:#2A1626; --muted:#76606F;
+  --accent:#9B1D4C; --brass:#A87B2E; --line:#E2D5DD; --soft:#F8F3F6;
+  --display:"Yeseva One", Georgia, "Times New Roman", serif;
+  --body:"Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#180E16; --surface:#23151F; --ink:#F4E9EF; --muted:#B39DAC;
+  --accent:#E8608A; --brass:#D9AE62; --line:#3A2733; --soft:#2B1B26; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#180E16; --surface:#23151F; --ink:#F4E9EF; --muted:#B39DAC;
+  --accent:#E8608A; --brass:#D9AE62; --line:#3A2733; --soft:#2B1B26; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:32px 48px}
+.wrap{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.slate{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding-block:10px}
+.slate b{color:var(--ink);font-weight:500}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(34px,7vw,48px)}
+h2{font-size:clamp(28px,6vw,38px)}
+h3{font-size:20px}
+p{margin:0}
+.lead{font-size:18px;color:var(--ink);max-width:60ch}
+.muted{color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.intro-points{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.intro-points li{padding-left:18px;position:relative}
+.intro-points li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:2px;background:var(--accent)}
+.btn{font:600 16px/1 var(--body);border:0;border-radius:999px;padding:16px 26px;cursor:pointer;background:var(--accent);color:#fff;align-self:flex-start;text-decoration:none;display:inline-block}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn:focus-visible,.opt:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.take{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.bar{height:4px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);transition:width .3s}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{font:400 16px/1.4 var(--body);text-align:left;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--accent)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.linkbtn{background:none;border:0;color:var(--muted);font:500 14px var(--body);cursor:pointer;padding:6px 0;text-decoration:underline}
+.role-tag{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.quote{font-family:var(--display);font-size:22px;line-height:1.3;color:var(--accent)}
+.sec{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid var(--line)}
+.sec .lbl{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.permit{background:var(--soft);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.permit .big{font-family:var(--display);font-size:24px;line-height:1.25}
+.cta{border:1px solid var(--accent)}
+.word{font-family:var(--mono);font-size:20px;letter-spacing:.2em;color:var(--accent);background:var(--soft);border-radius:8px;padding:6px 12px;user-select:all}
+.foot{font-size:13px;color:var(--muted);max-width:60ch}
+@media (prefers-reduced-motion: reduce){.bar i{transition:none}}
+</style>
+
+<div class="wrap">
+  <div class="slate"><span>Кастинг <b>«Главная роль»</b></span><span>Режиссёр <b>вы</b></span><span>Кастинг-директор <b>Марина Кирина</b></span></div>
+
+  <section id="intro" class="card">
+    <h1>Какую роль вы играете в своей жизни?</h1>
+    <p class="lead">8 коротких сцен, 2 минуты. Отвечайте первым, что откликнулось, а не тем, как «правильно».</p>
+    <ul class="intro-points">
+      <li>В детстве каждый получает своё «надо»: быть сильной, быть лучшей, всех радовать. И потом годами играет его, думая, что это и есть характер.</li>
+      <li>Жизнь похожа на игру, где важно помнить: вы не персонаж, вы тот, кто играет. А значит, роль можно увидеть и выбрать другую.</li>
+      <li>За 22 года и 800 000 кастингов я вижу одно: стоит человеку заметить свою роль, и он перестаёт тратить силы на то, чтобы казаться.</li>
+    </ul>
+    <button class="btn" id="start" type="button">Начать кастинг</button>
+  </section>
+
+  <section id="quiz" class="card" hidden>
+    <div class="row" style="justify-content:space-between"><span class="take" id="take"></span><button class="linkbtn" id="back" type="button">Назад</button></div>
+    <div class="bar"><i id="prog"></i></div>
+    <h3 id="q"></h3>
+    <div class="opts" id="opts"></div>
+  </section>
+
+  <section id="result" hidden></section>
+
+  <p class="foot">Это не психологическая диагностика, а игра-подсказка, основанная на 22 годах практики кастинг-директора.</p>
+</div>
+
+<script>
+const ROLES = {
+  A:{name:"Отличница", tag:"Внутреннее «надо»: быть лучшей",
+     quote:"«Меня любят, когда я лучшая».",
+     script:"Где-то очень рано вы усвоили: ценность надо заслужить результатом. Пятёрка, похвала, безупречно сделанная работа. С тех пор внутри живёт строгий проверяющий, и ему всегда мало.",
+     game:"Игра в идеальную. Вы делаете больше всех и тщательнее всех, а признание всё равно не приходит. Потому что признание нужно не другим, а вам самой — от себя.",
+     cost:"Вы откладываете старт, пока не станет идеально. Отдых нужно заработать. Деньги и проекты проходят мимо, пока вы доводите до блеска то, что уже давно хорошо.",
+     permit:"Я разрешаю себе ошибаться и оставаться ценной.",
+     step:"Сделайте сегодня одну вещь на 70% и отпустите её в мир. Посмотрите на себя со стороны, как Игрок на персонажа: что на самом деле случилось? Скорее всего, ничего страшного."},
+  B:{name:"Удобная", tag:"Внутреннее «надо»: всем нравиться",
+     quote:"«Я хорошая, пока никому не мешаю».",
+     script:"Вас рано научили, что любовь — это когда все довольны. Вы чутко считываете, чего хотят другие, и подстраиваетесь раньше, чем вас попросят. Ваши желания откладываются «на потом».",
+     game:"Игра «Потом». Вы откладываете своё ради близких, а потом внутри копится тихая обида: «если бы не вы, я бы давно…». И близкие даже не знают, чем вы пожертвовали.",
+     cost:"Ваше «хочу» звучит всё тише. Вы устаёте не от дел, а от постоянного подстраивания. В деньгах вы называете цену, которая «никого не напугает», а не ту, которую стоите.",
+     permit:"Я разрешаю себе хотеть для себя.",
+     step:"Сегодня один раз скажите вслух «я хочу» или «нет, мне это не подходит». Без оправданий. И посмотрите, как мир это выдержит."},
+  C:{name:"Железная", tag:"Внутреннее «надо»: справляться самой",
+     quote:"«Если не я, то кто?»",
+     script:"Вам когда-то сказали: «не реви», «справляйся сама», «ты же сильная». И вы справились. Со всем. Сила стала ролью, из которой страшно выйти, потому что кажется, что без неё всё рухнет.",
+     game:"Игра «Я сама». Вы берёте на себя всё больше, пока не упадёте от усталости. И только тогда как будто появляется право остановиться.",
+     cost:"Вам помогают всё реже — ведь вы же справитесь. Близость даётся трудно: в ней нужно быть мягкой. Вы много отдаёте, но почти не умеете получать.",
+     permit:"Я разрешаю себе быть слабой и просить о помощи.",
+     step:"Попросите сегодня о помощи в одном маленьком деле. Не потому, что не можете сами, а потому что можно. Это и есть ход Игрока, а не персонажа."},
+  D:{name:"Спасательница", tag:"Внутреннее «надо»: быть нужной",
+     quote:"«Я нужна, пока помогаю».",
+     script:"Вы рано стали «помощницей» и «умницей», той, на кого можно опереться. Ценность стала равна полезности. Чужие проблемы вы чувствуете острее своих.",
+     game:"Игра «Без меня не справятся». Вы спасаете без запроса, а потом удивляетесь, почему люди не благодарят и не меняются. А та, кто всех спасает, рано или поздно сама чувствует себя использованной.",
+     cost:"Ваши силы уходят на чужие жизни, а на свою не остаётся. В отношениях вы скорее мама, чем женщина. В работе берёте лишнее и делаете бесплатно.",
+     permit:"Я разрешаю себе быть ценной, даже когда никого не спасаю.",
+     step:"Сегодня не вмешивайтесь туда, где вас не просили. Просто побудьте рядом. Пусть другой человек сыграет свою роль сам."},
+  E:{name:"Бегущая", tag:"Внутреннее «надо»: успевать всё",
+     quote:"«Остановлюсь — и не успею».",
+     script:"Вас подгоняли: «быстрее», «не копайся», «старайся лучше». И вы научились жить на бегу. Курсы, инструменты, новые идеи — всё время что-то начинается.",
+     game:"Игра «Вот найду правильный способ». Вы ищете решение, находите его — и сразу видите, почему оно не подойдёт. Бег по кругу, салки с жизнью. Движения много, а точка та же.",
+     cost:"Вы устаёте и не чувствуете результата. Много начато, мало доведено. Кажется, что вот-вот найдёте правильный инструмент, но дело не в инструменте.",
+     permit:"Я разрешаю себе остановиться и ничего не потерять.",
+     step:"Выберите сегодня одно дело из всех и доведите его до конца. А перед этим 10 минут ничего не делайте. Игрок сначала смотрит на сцену, а потом делает ход."}
+};
+const Q = [
+  {q:"Сцена 1. Утро понедельника. Первая мысль:", o:[["Сегодня всё должно быть идеально","A"],["Надо узнать, как там все, не нужна ли кому помощь","D"],["Сколько всего надо успеть — бегом","E"],["Справлюсь. Как всегда, сама","C"],["Лишь бы никто не был мной недоволен","B"]]},
+  {q:"Сцена 2. Вас хвалят. Что внутри?", o:[["Приятно, что угодила","B"],["Могло быть и лучше","A"],["Главное, что людям стало легче","D"],["Ничего особенного, просто сделала","C"],["Спасибо — и уже бегу дальше","E"]]},
+  {q:"Сцена 3. Подруга просит о помощи, а сил у вас нет:", o:[["Соглашаюсь, неудобно отказать","B"],["Помогу, а про свою усталость промолчу","C"],["Бросаю всё: ей же сейчас хуже","D"],["Соглашаюсь и втискиваю между делами","E"],["Помогу, но сделаю безупречно","A"]]},
+  {q:"Сцена 4. Что вам сложнее всего себе разрешить?", o:[["Показать неидеальное и ошибиться","A"],["Попросить о помощи. Заплакать","C"],["Сказать вслух «я хочу»","B"],["Остановиться и ничего не делать","E"],["Пройти мимо, когда кому-то плохо","D"]]},
+  {q:"Сцена 5. Фраза из детства, которая звучит до сих пор:", o:[["«Не реви, ты же сильная»","C"],["«Можешь лучше — значит, должна»","A"],["«Не копайся, быстрее»","E"],["«Помоги, ты же умница»","D"],["«Не расстраивай маму»","B"]]},
+  {q:"Сцена 6. Когда вы злитесь:", o:[["Переключаюсь на новое дело","E"],["Молчу и улыбаюсь, а злость копится","B"],["Ругаю себя, что не предусмотрела","A"],["Думаю: «я столько для них сделала, а они…»","D"],["Стискиваю зубы и делаю ещё больше","C"]]},
+  {q:"Сцена 7. Вдруг выпал свободный вечер. Вы:", o:[["Звоните тому, кому сейчас трудно","D"],["Не знаете, что с ним делать — отдыхать непривычно","C"],["Берёте что-то доделать","A"],["Спрашиваете, чего хотят близкие","B"],["Сразу забиваете его планами","E"]]},
+  {q:"Сцена 8. Что вы чаще всего чувствуете в конце дня?", o:[["«Устала, но кто, если не я»","C"],["«Всем хорошо, а мне?»","B"],["«День пролетел, а я на месте»","E"],["«Опять не дотянула»","A"],["«Меня используют»","D"]]}
+];
+const $ = id => document.getElementById(id);
+let answers = [];
+
+function show(id){ ["intro","quiz","result"].forEach(s => $(s).hidden = s!==id); window.scrollTo({top:0}); }
+function render(){
+  const i = answers.length, item = Q[i];
+  $("take").textContent = "Дубль " + (i+1) + " из " + Q.length;
+  $("prog").style.width = (i/Q.length*100) + "%";
+  $("q").textContent = item.q;
+  $("back").style.visibility = i ? "visible" : "hidden";
+  const box = $("opts"); box.innerHTML = "";
+  item.o.forEach(([t,r]) => {
+    const b = document.createElement("button");
+    b.type="button"; b.className="opt"; b.textContent=t;
+    b.onclick = () => { answers.push(r); answers.length < Q.length ? render() : finish(); };
+    box.appendChild(b);
+  });
+}
+function finish(){
+  const score = {A:0,B:0,C:0,D:0,E:0};
+  answers.forEach(r => score[r]++);
+  const order = Object.keys(score).sort((a,b) => score[b]-score[a] || answers.lastIndexOf(b)-answers.lastIndexOf(a));
+  const R = ROLES[order[0]], second = score[order[1]] >= 2 ? ROLES[order[1]] : null;
+  $("result").innerHTML = `
+    <div class="card">
+      <span class="role-tag">Ваша роль сейчас · ${R.tag}</span>
+      <h2>${R.name}</h2>
+      <p class="quote">${R.quote}</p>
+      <div class="sec"><span class="lbl">Сценарий</span><p>${R.script}</p></div>
+      <div class="sec"><span class="lbl">Игра, которую вы разыгрываете</span><p>${R.game}</p></div>
+      <div class="sec"><span class="lbl">Чего стоит эта роль</span><p>${R.cost}</p></div>
+      <div class="permit"><span class="sec lbl" style="border:0;padding:0">Ваше разрешение</span><p class="big">${R.permit}</p></div>
+      <div class="sec"><span class="lbl">Ход Игрока на сегодня</span><p>${R.step}</p></div>
+      ${second ? `<div class="sec"><span class="lbl">Второй план</span><p>Рядом с этой ролью у вас звучит ещё одна — <b>${second.name}</b>: ${second.quote} Часто роли идут парой и поддерживают друг друга.</p></div>` : ""}
+    </div>
+    <div class="card cta">
+      <h3>Это только кастинг. Главная роль впереди</h3>
+      <p>Роль, которую вы увидели, не приговор и не характер. Это сценарий, который когда-то помог выжить, а теперь забирает силы, деньги и близость.</p>
+      <p>27 октября в 11:00 на конференции «Я разрешаю себе!» я проведу мини-кастинг вживую и покажу, как выйти из роли легко, без революций.</p>
+      <p>Хотите разобрать свою роль лично? Напишите мне в Telegram слово</p>
+      <div class="row"><span class="word">РОЛЬ</span><a class="btn" href="https://t.me/more_kastinga" target="_blank" rel="noopener">Написать Марине</a></div>
+      <p class="muted" style="font-size:14px">Telegram: t.me/more_kastinga</p>
+    </div>
+    <button class="btn ghost" id="again" type="button">Пройти кастинг заново</button>`;
+  $("again").onclick = () => { answers=[]; show("intro"); };
+  show("result");
+}
+$("start").onclick = () => { answers=[]; render(); show("quiz"); };
+$("back").onclick = () => { answers.pop(); render(); };
+</script>
+
+</body></html>
